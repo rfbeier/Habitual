@@ -1,0 +1,198 @@
+$primary-color: #00154f;
+$secondary-color: #f2f261;
+$third-color: #f4af1b;
+
+body {
+    background-color: $primary-color;
+    color: white;
+}
+
+/* HEADER */
+#header{
+    /* background-color: #b8df10; */
+    text-align:center;
+    margin:0px ;
+    height:50px;
+    color: $third-color;
+    /* -bottom:10px; */
+    //  border:4px solid $third-color;
+
+}
+
+/* OUTER CONTAINER */
+#outer-container{
+    background-color: cyan;
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+} 
+
+
+/* SIDEBAR STYLING */
+#sidebar-container{
+    background-color: $primary-color;
+    border:4px solid $third-color;
+    border-left: none;
+} 
+
+.saved-date-before{
+    background-color: $primary-color;
+    filter:brightness(250%);
+    margin:10px;
+    text-align:center;
+    height:5%;
+    top:50%;
+    font-size:20px;
+}
+.saved-date-current{
+    background-color: #00154f;
+    margin:10px;
+    text-align:center;
+    height:5%;
+    top:50%;
+    font-size:20px;
+    border:3px solid $third-color;
+}
+.saved-date-after{
+    // background-color: rgb(180, 179, 179);
+    background-color: rgba(226, 225, 225, 0.904);
+    // background-color: rgb(182, 180, 180)// $third-color;
+    margin:10px;
+    text-align:center;
+    height:5%;
+    top:50%;
+    font-size:20px;
+}
+
+#sidebar-header-1{
+    // color:$primary-color;
+    // background-color:$secondary-color;
+    text-align:center;
+    /* margin-top:10px; */
+    font-size:30px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    font-weight:bold;
+    color:$third-color;
+}
+#sidebar-header-2{
+    // color:$primary-color;
+    // background-color:$secondary-color;
+    text-align:center;
+    /* margin-top:10px; */
+    font-size:22px;
+    margin-bottom: 30px;
+    margin-top:20px;
+    font-weight:bold;
+    color:$third-color;
+}
+
+/* MAIN CONTAINER STYLING */
+#main-container{
+    background-color: $primary-color;
+    border:4px solid $third-color;
+    border-right:none;
+    display:grid;
+    grid-template-rows: 3fr 13fr 2fr
+}
+
+#main-container-header{
+    background-color: $primary-color;
+    text-align:center;
+    color:$third-color;
+    font-size: x-large;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:flex-end;
+    /* bottom:0px; */
+}
+
+#main-container-edit-submit{
+    background-color: $primary-color;
+}
+#button-holder{
+    background-color: white;
+    width:400px;
+    margin-top:10px;
+    margin-left:800px;
+}
+
+
+.button{
+    width:120px;
+    height: 40px;
+    font-size: large;
+}
+
+#new-submit{
+    margin-top:20px;
+    margin-left:620px;
+    width:140px;
+}
+
+/* TABLE STYLING */
+#inner-table-container{
+    background-color: white;
+    font-size:x-large;
+    text-align:center;
+    margin-top:20px;
+    margin-right:175px;
+    margin-left:175px;
+    height:450px;
+    display:grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/* #habits-column{
+    background-color: blue;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+} */
+
+#inner-table{
+    background-color: $secondary-color;
+    grid-column: 2 / -1;
+    grid-row:1 / -1;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.habit-name{
+    /* margin-top:20px; */
+    border: 1px solid black;
+    color:black;
+    background-color: $third-color;
+    font-style:italic;
+    // filter: brightness(115%);
+}
+
+#habit-header{
+    border: 1px solid black;
+    color:$primary-color;
+    background-color: $third-color;
+    font-weight:bold;
+    // filter: brightness(90%);
+}
+
+.day{
+    /* margin-top:20px; */
+    border: 1px solid black;
+    vertical-align: middle;
+    background-color: $third-color;
+    color:$primary-color;
+    font-weight:bold;
+    // filter: brightness(90%);
+
+}
+
+.grid-button{
+    background-color: rgba(226, 225, 225, 0.904);
+    // background-color: rgb(70, 211, 70);
+    // filter: brightness(125%);
+    font-size: x-large;
+}
