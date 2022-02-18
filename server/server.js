@@ -27,7 +27,7 @@ app.use(express.json())
 //     return res.status(200).json(retObjFake);
 // })
 
-app.get('/api/homepage', userController.getUserData, (req, res) => { // took out write dummy
+app.post('/api/homepage', userController.getUserData, (req, res) => { // took out write dummy
     // console.log(res.locals.payload);
     return res.status(200).json(res.locals.payload);
 

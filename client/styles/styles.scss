@@ -44,15 +44,18 @@ body {
     height:5%;
     top:50%;
     font-size:20px;
+    border-radius:5px;
 }
 .saved-date-current{
     background-color: #00154f;
     margin:10px;
     text-align:center;
+    font-weight:bold;
     height:5%;
     top:50%;
     font-size:20px;
     border:3px solid $third-color;
+    border-radius:5px;
 }
 .saved-date-after{
     // background-color: rgb(180, 179, 179);
@@ -63,6 +66,8 @@ body {
     height:5%;
     top:50%;
     font-size:20px;
+    border-radius:5px;
+
 }
 
 #sidebar-header-1{
@@ -82,7 +87,7 @@ body {
     text-align:center;
     /* margin-top:10px; */
     font-size:22px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top:20px;
     font-weight:bold;
     color:$third-color;
@@ -101,11 +106,12 @@ body {
     background-color: $primary-color;
     text-align:center;
     color:$third-color;
-    font-size: x-large;
+    font-size: xx-large;
     display:flex;
     flex-direction:row;
     justify-content:space-around;
     align-items:flex-end;
+    font-weight:bold;
     /* bottom:0px; */
 }
 
@@ -128,7 +134,7 @@ body {
 
 #new-submit{
     margin-top:20px;
-    margin-left:620px;
+    margin-left:750px;
     width:140px;
 }
 
@@ -190,9 +196,33 @@ body {
 
 }
 
-.grid-button{
+.grid-button-off{
     background-color: rgba(226, 225, 225, 0.904);
     // background-color: rgb(70, 211, 70);
     // filter: brightness(125%);
     font-size: x-large;
+    border-radius:3px;
+
+}
+
+.grid-button-on{
+    background-color: rgb(93, 201, 93);
+    filter:brightness(110%);
+    // background-color: rgb(70, 211, 70);
+    // filter: brightness(125%);
+    font-size: x-large;
+    border-radius:3px;
+
+}
+
+#finished{
+    font-weight:bold;
+    color:rgb(39, 163, 39);
+    font-size:xx-large;
+}
+
+#unfinished{
+    color:$third-color;
+    font-size:xx-large;
+    font-weight:normal;
 }

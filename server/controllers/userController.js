@@ -31,8 +31,9 @@ userController.writeDummy = (req, res, next)=>{
 
 
 userController.getUserData = (req, res, next) => {
-    const username = dummyDoc.username;
-    const password = dummyDoc.password; //SHOULD BE REQ.BODY
+    const username = req.body.username;
+    const password = req.body.password; //SHOULD BE REQ.BODY
+    // console.log("got into middleware")
     User.find({username, password}, (err, data) => {
         if (err) return next(err);
         if (data.length===0) {
@@ -50,19 +51,19 @@ userController.getUserData = (req, res, next) => {
 
 userController.updateUserData = (req, res, next) => {
     console.log("put req coming through on server side")
-    const username = "Rob" // DUMMY FOR LINE BELOW
-    // const username = req.body.username;
+    // const username = "Rob" // DUMMY FOR LINE BELOW
+    const username = req.body.username;
     console.log("username from req body", req.body);
 
-    const newSavedStates = dummyDoc.savedStates; //DUMMY FOR BELOW
-    // const newSavedStates = req.body.savedStates;
+    // const newSavedStates = dummyDoc.savedStates; //DUMMY FOR BELOW
+    const newSavedStates = req.body.savedStates;
 
-    const fakeLocalState = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]; // DUMMY
-    newSavedStates[4] = fakeLocalState
+    // const fakeLocalState = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]; // DUMMY
+    // newSavedStates[4] = fakeLocalState
+    const selectedWeek = req.body.selectedWeek;
+    newSavedStates[req.body.selectedWeek - 1] = req.body.localState;
 
-    // newSavedStates[req.body.currentWeek - 1] = req.body.localState;
-
-    User.findOneAndUpdate({username}, {savedStates: newSavedStates}, {
+    User.findOneAndUpdate({username}, {savedStates: newSavedStates, selectedWeek}, {
         new:true
     }).then( data => {
         console.log("data from put req below")

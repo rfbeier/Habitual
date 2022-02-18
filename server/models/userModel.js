@@ -17,6 +17,7 @@ const userSchema = new Schema( {
     username: {type:String, required:true, unique:true},
     password: {type:String, required:true},
     currentWeek:{type:Number, required:true},
+    selectedWeek: String,
     totalWeeks:{type:Number, required:true},
     habitList: [String],
     savedStates: [[Number]]

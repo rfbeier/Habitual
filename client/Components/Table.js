@@ -39,9 +39,9 @@ class Table extends Component {
 
         for (let i = 0; i<35; i+=1){
             if (this.state.localGridFill[i]){
-                days.push(<button className='grid-button' key={i} onClick={()=> this.onButtonClick(i)}>C</button>)
+                days.push(<button className='grid-button-on' key={i} onClick={()=> this.onButtonClick(i)}>Done!</button>)
             }else{
-                days.push(<button className='grid-button' key={i} onClick={()=> this.onButtonClick(i)}>O</button>)
+                days.push(<button className='grid-button-off' key={i} onClick={()=> this.onButtonClick(i)}>O</button>)
             }
         }
 
